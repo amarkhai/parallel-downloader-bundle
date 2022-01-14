@@ -1,0 +1,14 @@
+parameters:
+  amarkhai_parallel_downloader.download_files_folder: '%kernel.project_dir%/var/downloads'
+  amarkhai_parallel_downloader.download_retry: 3
+  amarkhai_parallel_downloader.download_concurrency: 10
+services:
+  GuzzleHttp\ClientInterface:
+    class: GuzzleHttp\Client
+
+  Amarkhai\ParallelDownloaderBundle\DownloadManager:
+    arguments:
+      $httpClient: '@GuzzleHttp\ClientInterface'
+      $downloadFolder: '%amarkhai_parallel_downloader.download_files_folder%'
+      $retry: '%amarkhai_parallel_downloader.download_retry%'
+      $concurrency: '%amarkhai_parallel_downloader.download_concurrency%'

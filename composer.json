@@ -1,0 +1,30 @@
+{
+    "name": "amarkhai/parallel-downloader-bundle",
+    "description": "The bundle for downloading files concurrently",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Amarkhai\\ParallelDownloaderBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Amarkhai\\ParallelDownloaderBundle\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrew Markhai",
+            "email": "buk2018irinam@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/http-kernel": "^6.0",
+        "symfony/dependency-injection": "^6.0",
+        "symfony/config": "^6.0"
+    }
+}
